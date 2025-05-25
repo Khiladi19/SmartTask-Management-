@@ -10,7 +10,8 @@ const app = express();
 
 
 const allowedOrigins = [
-  "http://localhost:5173",  
+  // "http://localhost:5173",
+  "https://smart-task-i9x1.onrender.com",
 ];
 
 app.use(cors({
