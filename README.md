@@ -108,9 +108,6 @@ VITE_API_URL=http://localhost:2000
 server/.env
 MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
-RAZORPAY_KEY_ID=your_key_id
-RAZORPAY_KEY_SECRET=your_key_secret
-
 ---
 
 👨‍💻 Developed by
