@@ -1,7 +1,2 @@
- Node
-node_modules/
 .env
-
-# Build output
-client/dist
-server/dist
+node_modules
