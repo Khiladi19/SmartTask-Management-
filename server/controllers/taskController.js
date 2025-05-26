@@ -65,12 +65,8 @@ export const deleteTask = async (req, res, next) => {
   }
 };
 
-/---------/
-const fetchTasks = async (userId) => {
-  return await Task.find({ user: userId }).lean();
-};
 
-// ✅ Export CSV
+// Export CSV
 export const exportTasksToCSV = async (req, res) => {
   const tasks = await fetchTasks(req.user._id);
   const fields = ['name', 'description', 'category', 'dueDate', 'status'];
@@ -82,7 +78,7 @@ export const exportTasksToCSV = async (req, res) => {
   return res.send(csv);
 };
 
-// ✅ Export Excel
+//  Export Excel
 export const exportTasksToExcel = async (req, res) => {
   const tasks = await fetchTasks(req.user._id);
   const workbook = new ExcelJS.Workbook();
@@ -105,7 +101,7 @@ export const exportTasksToExcel = async (req, res) => {
   res.end();
 };
 
-// ✅ Export PDF
+//  Export PDF
 export const exportTasksToPDF = async (req, res) => {
   const tasks = await fetchTasks(req.user._id);
   const doc = new PDFDocument();
